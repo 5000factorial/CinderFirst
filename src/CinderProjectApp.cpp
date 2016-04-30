@@ -51,8 +51,11 @@ class CinderProjectApp : public AppNative {
     }
 
     void draw() { // сюда должно разместить логику перересовки приложения в связи с наступлением нового кадра. вызывется каждый кадр
-        gl::clear( Color::black() ); // стееть все что нарисованно на сцене
-        gl::drawCube(objectPosition , Vec3f( 10.0f, 10.0f, 10.0f ) );  // нарисовать параленнипипед
+        gl::clear( Color( 0, 1.0f, 1.0f ) ); // стееть все что нарисованно на сцене
+        gl::drawSphere(objectPosition , 25 );  // нарисовать параленнипипед
+		glColor3f(1.0f,0.0f,0.0f);
+        gl::drawSphere(objectPosition , 15 );  // нарисовать параленнипипед
+
         cameraParams.draw(); // нарисовать окно параметров
     }
 };
